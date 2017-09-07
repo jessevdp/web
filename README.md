@@ -1,2 +1,2 @@
-# web
+# Project WEB
 Project WEB
