@@ -1,5 +1,33 @@
 @import "variables";
 
 body {
-  background: $a;
+  margin: 0;
+  overflow-x: hidden;
+
+  display: grid;
+  grid-template-areas:  "header header header header"
+                        ". main aside ."
+                        "footer footer footer footer";
+  grid-template-columns: 1fr minmax(300px, 700px) max-content 1fr;
+  grid-template-rows: 100px auto auto;
+  grid-gap: 40px;
+}
+
+header {
+  background: #222;
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+  a {
+    display: block;
+  }
+}
+footer {
+  background-color: black;
+  height: 200px;
+  grid-area: footer;
 }
