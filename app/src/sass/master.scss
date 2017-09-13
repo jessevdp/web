@@ -5,23 +5,33 @@ body {
   overflow-x: hidden;
 
   display: grid;
-  grid-template-areas:  "header header header header"
-                        ". main aside ."
-                        "footer footer footer footer";
-  grid-template-columns: 1fr minmax(300px, 700px) max-content 1fr;
-  grid-template-rows: 100px auto auto;
-  grid-gap: 40px;
+  grid-template-columns:
+    minmax(40px, 1fr)
+    [padded-start] 40px
+    [main-start] minmax(400px, 600px) [main-end]
+    40px [padded-end]
+    20px
+    [nav-start] minmax(max-content, auto) [nav-end]
+    minmax(40px, 1fr);
 }
 
 header {
-  background: #222;
-  grid-area: header;
+  margin-top: 40px;
+  background: transparentize(hotpink, .5);
+  height: 200px;
+  grid-column: main;
 }
 main {
-  grid-area: main;
+  padding: 40px;
+  margin-top: 40px;
+  background: transparentize(lightblue, .5);
+  grid-column: padded;
 }
-aside {
-  grid-area: aside;
+nav {
+  margin-top: 40px;
+  grid-column: nav;
+  grid-row: 2;
+  background: transparentize(lime, .5);
   a {
     display: block;
   }
@@ -29,5 +39,5 @@ aside {
 footer {
   background-color: black;
   height: 200px;
-  grid-area: footer;
+  grid-column: padded;
 }
