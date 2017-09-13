@@ -36,4 +36,4 @@ Runing the gulp default task will fire up the `browserSync` server, opening the 
 # License & Disclaimer
 This module is open-sourced under the MIT Licence (see [LICENSE](LICENSE) for the full license). So within some limits, you can do with the code whatever you want.
 
-The software is provided as is. It might work as expected - or not. Just don't blame me.
+The software is provided as is. It might work as expected — or not. Just don't blame me.
