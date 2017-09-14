@@ -1,0 +1,38 @@
+body {
+  display: grid;
+  grid-template-columns:
+    minmax(40px, 1fr)
+    [padded-start] 40px
+    [main-start] minmax(400px, 600px) [main-end]
+    40px [padded-end]
+    20px
+    [nav-start] minmax(max-content, auto) [nav-end]
+    minmax(40px, 1fr);
+}
+
+header {
+  margin-top: 40px;
+  background: transparentize(hotpink, .5);
+  height: 200px;
+  grid-column: main;
+}
+main {
+  padding: 40px;
+  margin-top: 40px;
+  background: transparentize(lightblue, .5);
+  grid-column: padded;
+}
+nav {
+  margin-top: 40px;
+  grid-column: nav;
+  grid-row: 2;
+  background: transparentize(lime, .5);
+  a {
+    display: block;
+  }
+}
+footer {
+  background-color: black;
+  height: 200px;
+  grid-column: padded;
+}
