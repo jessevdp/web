@@ -1,3 +1,11 @@
+// First, reset the root-em size (rem)
+html, :root {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+}
+
 @import "normalize";
 @import "variables";
 
