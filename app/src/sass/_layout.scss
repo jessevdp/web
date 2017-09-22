@@ -3,11 +3,11 @@
   body {
     display: grid;
     grid-template-columns:
-      minmax(20px, 1fr)
-      [padded-start] 20px
+      minmax($spacer-large-sm, 1fr)
+      [padded-start] $spacer-large-sm
       [main-start] auto
-      [main-end] 20px
-      [padded-end] minmax(20px, 1fr);
+      [main-end] $spacer-large-sm
+      [padded-end] minmax($spacer-large-sm, 1fr);
   }
   header, nav, footer {
     grid-column: main;
@@ -20,13 +20,13 @@
   @media (min-width: $bp-md) {
     body {
       grid-template-columns:
-        minmax(40px, 1fr)
-        [padded-start] 40px
+        minmax($spacer-large-md, 1fr)
+        [padded-start] $spacer-large-md
         [main-start] minmax(400px, 600px)
-        [main-end] 40px
-        [padded-end] 20px
+        [main-end] $spacer-large-md
+        [padded-end] $spacer-small-md
         [nav-start] minmax(max-content, auto)
-        [nav-end] minmax(40px, 1fr);
+        [nav-end] minmax($spacer-large-md, 1fr);
     }
     nav {
       grid-column: nav;
