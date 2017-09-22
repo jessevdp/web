@@ -58,3 +58,12 @@ a {
   text-decoration: none;
   color: $color-link;
 }
+code {
+  font-size: 0.94em;
+  font-family: $font-code;
+  color: $color-text-bold;
+
+  padding: 0 .3em;
+  background: #ccc;
+  border-radius: .1em;
+}
