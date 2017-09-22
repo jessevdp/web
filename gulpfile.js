@@ -6,7 +6,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
 
 gulp.task('sass', function () {
-  gulp.src('./app/src/sass/*.scss')
+  gulp.src('./app/src/sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded'} ).on('error', sass.logError))
     .pipe(sourcemaps.write())
@@ -22,7 +22,7 @@ gulp.task('serve', ['sass'], function () {
     notify: false
   })
 
-  gulp.watch('./app/src/sass/*.scss', ['sass'])
+  gulp.watch('./app/src/sass/**/*.scss', ['sass'])
   gulp.watch('./app/*.html').on('change', browserSync.reload)
 })
 
