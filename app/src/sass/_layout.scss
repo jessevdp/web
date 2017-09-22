@@ -38,24 +38,32 @@
 
 // Temp styles used to
 header {
-  margin-top: 40px;
-  background: transparentize(hotpink, .5);
-  height: 200px;
+  margin-top: $spacer-large-sm;
 }
 main {
-  padding: 40px;
-  margin-top: 40px;
+  padding: $spacer-large-sm;
+  margin-top: $spacer-large-sm;
   background: transparentize(lightblue, .5);
 }
 nav {
-  margin-top: 40px;
+  margin-top: $spacer-large-sm;
   background: transparentize(lime, .5);
   a {
     display: block;
   }
 }
 footer {
-  margin-top: 15px;
+  margin-top: $spacer-small-sm;
   background-color: black;
-  height: 200px;
+}
+@media (min-width: $bp-md) {
+  header, main, nav {
+    margin-top: $spacer-large-md;
+  }
+  main {
+    padding: $spacer-large-md;
+  }
+  footer {
+    margin-top: $spacer-small-md;
+  }
 }
