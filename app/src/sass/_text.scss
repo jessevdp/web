@@ -23,7 +23,15 @@ h3 {
 h4, h5, h6 {
   @include header;
   font-size: 2em;
+
   margin: 0;
+  margin-top: $spacer-small-sm;
+  @media (min-width: $bp-md) {
+    margin-top: $spacer-small-md;
+  }
+  & + * {
+    margin-top: 0!important;
+  }
 }
 
 p {
