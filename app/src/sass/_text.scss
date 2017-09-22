@@ -45,3 +45,16 @@ p {
     margin: $spacer-small-md 0 0;
   }
 }
+
+strong {
+  color: $color-text-bold;
+  font-weight: inherit;
+}
+em {
+  background: $color-emphasis;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: $color-link;
+}
