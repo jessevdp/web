@@ -43,11 +43,10 @@ header {
 main {
   padding: $spacer-large-sm;
   margin-top: $spacer-large-sm;
-  background: transparentize(lightblue, .5);
+  background: $color-background-main;
 }
 nav {
   margin-top: $spacer-large-sm;
-  background: transparentize(lime, .5);
   a {
     display: block;
   }
