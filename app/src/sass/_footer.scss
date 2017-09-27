@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  align-items: center;
+
+  @include font-bold;
+  font-size: .75em;
+  color: $footer-text-color;
+
+  >* {
+    margin-right: 1ch;
+  }
+
+  img {
+    margin-top: 0!important;
+    width: 2em!important;
+    height: 2em!important;
+  }
+  a {
+    color: $footer-link-color!important;
+    text-decoration: none;
+  }
+}

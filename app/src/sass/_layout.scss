@@ -10,10 +10,10 @@
       [main-end] $spacer-large-sm
       [padded-end] minmax($spacer-large-sm, 1fr);
   }
-  header, nav, footer {
+  header, nav {
     grid-column: main;
   }
-  main {
+  main, footer {
     grid-column: padded;
   }
 
