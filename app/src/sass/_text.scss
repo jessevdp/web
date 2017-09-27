@@ -90,3 +90,18 @@ code {
   background: $text-code-bg;
   border-radius: .1em;
 }
+
+ol, ul {
+  @include font;
+  color: $text-color;
+
+  li {
+    margin-bottom: .25em;
+  }
+
+  padding: 0;
+  margin: $spacer-small-sm 0 0 1em;
+  @media (min-width: $bp-md) {
+    margin-top: $spacer-small-md;
+  }
+}
