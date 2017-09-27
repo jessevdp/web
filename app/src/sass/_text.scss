@@ -11,6 +11,15 @@
 h1 {
   @include header;
   font-size: 2.5em;
+
+  margin: 0!important;
+  padding: $spacer-large-md 0 0;
+  &:first-child {
+    padding: 0;
+  }
+  a {
+    color: $text-header-color;
+  }
 }
 h2 {
   @include header;
