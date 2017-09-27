@@ -6,3 +6,31 @@ img {
     margin-top: $spacer-small-md;
   }
 }
+
+.image-container {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-gap: $spacer-small-sm;
+
+  margin-top: $spacer-large-sm;
+  @media (min-width: $bp-md) {
+    margin-top: $spacer-large-md;
+
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $spacer-small-md;
+  }
+
+  & + * {
+    margin-top: $spacer-large-sm;
+    @media (min-width: $bp-md) {
+      margin-top: $spacer-large-md;
+    }
+  }
+
+  @supports (display: grid) {
+    img {
+      margin: 0;
+    }
+  }
+}
