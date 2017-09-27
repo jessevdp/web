@@ -2,33 +2,48 @@
   @include font-serif-bold;
   color: $text-header-color;
 
-  margin: $spacer-large-md 0 0;
+  margin: $spacer-large-sm 0 0;
   &:first-child {
     margin: 0;
+  }
+  @media (min-width: $bp-md) {
+    margin: $spacer-large-md 0 0;
   }
 }
 
 h1 {
   @include header;
-  font-size: 2.5em;
+
+  font-size: 2em;
+  @media (min-width: $bp-md) {
+    font-size: 2.5em;
+  }
 
   margin: 0!important;
   padding: $spacer-large-md 0 0;
   &:first-child {
     padding: 0;
   }
+
   a {
-    color: $text-header-color;
+    color: inherit;
   }
 }
+
 h2 {
   @include header;
-  font-size: 1.5em;
+
+  font-size: 1.2em;
+  @media (min-width: $bp-md) {
+    font-size: 1.5em;
+  }
 }
+
 h3 {
   @include header;
   font-size: 1em;
 }
+
 h4, h5, h6 {
   @include header;
   font-size: 1em;
