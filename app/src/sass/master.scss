@@ -12,6 +12,8 @@ html, :root {
 body {
   font-size: 2rem;
   @import "text";
+  
+  @import "components/images";
 
   @import "components/color-swatches";
 }
