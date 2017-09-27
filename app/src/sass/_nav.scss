@@ -1,0 +1,7 @@
+nav {
+  @include font;
+  a {
+    display: block;
+    margin-bottom: $spacer-small-md;
+  }
+}
