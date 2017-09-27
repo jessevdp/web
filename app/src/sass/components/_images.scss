@@ -10,15 +10,9 @@ img {
 .image-container {
   display: grid;
 
-  grid-template-columns: 1fr;
-  grid-gap: $spacer-small-sm;
-
   margin-top: $spacer-large-sm;
   @media (min-width: $bp-md) {
     margin-top: $spacer-large-md;
-
-    grid-template-columns: 1fr 1fr;
-    grid-gap: $spacer-small-md;
   }
 
   & + * {
@@ -29,8 +23,12 @@ img {
   }
 
   @supports (display: grid) {
-    img {
-      margin: 0;
+    @media (min-width: $bp-md) {
+      img {
+        margin: 0;
+      }
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $spacer-small-md;
     }
   }
 }
