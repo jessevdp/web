@@ -17,6 +17,27 @@ $font-body: $roboto;
 $font-header: $roboto-slab;
 $font-code: $roboto-mono;
 
+$color-sand:        #F5EFE6;
+$color-sand-dark:   #A89E8D;
+$color-grey:        #DDD9D5;
+$color-dark-blue:   #34495E;
+$color-bright-blue: #00ADEF;
+$color-yellow:      #FAF785;
+$color-red:         #E74C3C;
+$color-green:       #2ECC71;
+
+$ui-bg:       white;
+$ui-main-bg:  $color-sand;
+
+$text-color:          $color-sand-dark;
+$text-header-color:   $color-dark-blue;
+$text-bold-color:     $color-dark-blue;
+$text-link-color:     $color-bright-blue;
+$text-emphasis-color: $color-yellow;
+$text-code-color:     $color-dark-blue;
+$text-code-bg:        $color-grey;
+
+
 $color-header: #34495E;
 $color-text: #A89E8D;
 $color-text-bold: #34495E;

@@ -11,3 +11,8 @@ html, :root {
 body {
   @import "text";
 }
+
+*:focus {
+  outline-offset: 1px;
+  outline: 2px dashed #34495E;
+}
