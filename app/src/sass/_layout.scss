@@ -1,4 +1,5 @@
-// Grid only if we have support
+// GRID LAYOUT
+
 @supports (display: grid) {
   body {
     display: grid;
@@ -35,26 +36,29 @@
   }
 }
 
+// TODO: move this to a separate file (_nav.scss)
+nav a {
+  display: block;
+}
+// END
 
-// Temp styles used to
-header {
-  margin-top: $spacer-large-sm;
+// SPACING OF LAYOUT
+
+body {
+  background: $ui-bg;
 }
 main {
   padding: $spacer-large-sm;
-  margin-top: $spacer-large-sm;
-  background: $color-background-main;
+  background: $ui-main-bg;
 }
-nav {
+header, nav, main {
   margin-top: $spacer-large-sm;
-  a {
-    display: block;
-  }
 }
 footer {
   margin-top: $spacer-small-sm;
-  background-color: black;
+  margin-bottom: $spacer-large-sm;
 }
+
 @media (min-width: $bp-md) {
   header, main, nav {
     margin-top: $spacer-large-md;
@@ -64,5 +68,6 @@ footer {
   }
   footer {
     margin-top: $spacer-small-md;
+    margin-bottom: $spacer-large-md;
   }
 }

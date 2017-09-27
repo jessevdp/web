@@ -38,10 +38,6 @@ $roboto-slab: 'Roboto Slab', serif;
   font-weight: 700;
 }
 
-$font-body: $roboto;
-$font-header: $roboto-slab;
-$font-code: $roboto-mono;
-
 $color-sand:        #F5EFE6;
 $color-sand-dark:   #A89E8D;
 $color-grey:        #DDD9D5;
@@ -62,12 +58,10 @@ $text-emphasis-color: $color-yellow;
 $text-code-color:     $color-dark-blue;
 $text-code-bg:        $color-grey;
 
+$header-text-color: $color-sand-dark;
 
-$color-header: #34495E;
-$color-text: #A89E8D;
-$color-text-bold: #34495E;
+$nav-link-color:      $color-bright-blue;
+$nav-separator-color: $color-dark-blue;
 
-$color-link: #00ADEF;
-$color-emphasis: #FAF785;
-
-$color-background-main: #F5EFE6;
+$footer-text-color: $color-sand-dark;
+$footer-link-color: $color-dark-blue;

@@ -1,7 +1,7 @@
 @mixin header {
-  font-family: $font-header;
-  font-weight: 700;
-  color: $color-header;
+  @include font-serif-bold;
+  color: $text-header-color;
+
   margin: $spacer-large-md 0 0;
   &:first-child {
     margin: 0;
@@ -35,10 +35,9 @@ h4, h5, h6 {
 }
 
 p {
-  font-family: $font-body;
-  font-weight: 400;
+  @include font;
   font-size: 2em;
-  color: $color-text;
+  color: $text-color;
 
   margin: $spacer-small-sm 0 0;
   @media (min-width: $bp-md) {
@@ -47,23 +46,23 @@ p {
 }
 
 strong {
-  color: $color-text-bold;
+  color: $text-bold-color;
   font-weight: inherit;
 }
 em {
-  background: $color-emphasis;
+  background: $text-emphasis-color;
   font-style: normal;
 }
 a {
   text-decoration: none;
-  color: $color-link;
+  color: $text-link-color;
 }
 code {
+  @include font-mono;
   font-size: 0.94em;
-  font-family: $font-code;
-  color: $color-text-bold;
+  color: $text-code-color;
 
   padding: 0 .3em;
-  background: #ccc;
+  background: $text-code-bg;
   border-radius: .1em;
 }
