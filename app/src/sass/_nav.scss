@@ -1,6 +1,9 @@
 nav {
   @include font;
   a {
+    color: $nav-link-color;
+    text-decoration: none;
+    
     display: block;
     margin-bottom: $spacer-small-md;
   }
