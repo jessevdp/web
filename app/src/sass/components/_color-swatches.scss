@@ -1,0 +1,38 @@
+.color-container {
+
+  margin-top: $spacer-small-sm;
+  @media (min-width: $bp-md) {
+    margin-top: $spacer-small-md;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .color {
+    text-align: center;
+
+    margin-right: $spacer-small-sm;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (min-width: $bp-md) {
+      margin-right: $spacer-small-md;
+    }
+
+    @include font-mono;
+    color: $text-bold-color;
+    font-size: .75em;
+    text-transform: uppercase;
+    margin-bottom: .25em;
+
+    &:before {
+      display: block;
+      content: '';
+      height: 5.5em;
+      width: 5.5em;
+      border: 1px solid black;
+      margin-bottom: .25em;
+      background-color: var(--color);
+    }
+  }
+}
