@@ -8,10 +8,35 @@ $spacer-small-md: 1.5rem;
 $spacer-large-sm: 2rem;
 $spacer-small-sm: 1rem;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:700|Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto+Slab:400,700|Roboto:400,700');
 $roboto: 'Roboto', sans-serif;
 $roboto-mono: 'Roboto Mono', monospace;
 $roboto-slab: 'Roboto Slab', serif;
+
+@mixin font {
+  font-family: $roboto;
+  font-weight: 400;
+}
+@mixin font-bold {
+  @include font;
+  font-weight: 700;
+}
+@mixin font-serif {
+  font-family: $roboto-slab;
+  font-weight: 400;
+}
+@mixin font-serif-bold {
+  @include font-serif;
+  font-weight: 700;
+}
+@mixin font-mono {
+  font-family: $roboto-mono;
+  font-weight: 400;
+}
+@mixin font-mono-bold {
+  @include font-mono;
+  font-weight: 700;
+}
 
 $font-body: $roboto;
 $font-header: $roboto-slab;
