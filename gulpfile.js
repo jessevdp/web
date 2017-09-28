@@ -20,12 +20,15 @@ gulp.task('sass', function () {
 
 gulp.task('js', function () {
   return gulp.src('./app/src/js/**/*.js')
+    .pipe(sourcemaps.init())
     .pipe(concat('all.min.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write(''))
     .pipe(gulp.dest('./app/assets/js/'))
+    .pipe(browserSync.stream())
 })
 
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', ['sass', 'js'], function () {
   browserSync.init({
     server: "./app",
     injectChanges: true,
