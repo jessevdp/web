@@ -32,8 +32,9 @@ gulp.task('serve', ['sass'], function () {
     notify: false
   })
 
-  gulp.watch('./app/src/sass/**/*.scss', ['sass'])
-  gulp.watch('./app/**/*.html').on('change', browserSync.reload)
+  gulp.watch('app/src/sass/**/*.scss', ['sass'])
+  gulp.watch('app/src/js/**/*.js', ['js'])
+  gulp.watch('app/**/*.html').on('change', browserSync.reload)
 })
 
 gulp.task('default', ['serve'])
