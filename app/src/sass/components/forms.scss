@@ -1,0 +1,17 @@
+form {
+  margin: $spacer-small-sm 0 0;
+  @media (min-width: $bp-md) {
+    margin: $spacer-small-md 0 0;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacer-small-sm;
+  @media (min-width: $bp-md) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $spacer-small-md;
+    .double {
+      grid-column: span 2;
+    }
+  }
+}

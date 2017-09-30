@@ -4,11 +4,6 @@
 
   position: relative;
 
-  margin: $spacer-small-sm 0 0;
-  @media (min-width: $bp-md) {
-    margin: $spacer-small-md 0 0;
-  }
-
   input {
     font-size: 1em;
     @include font;
