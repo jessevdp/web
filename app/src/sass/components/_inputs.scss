@@ -28,21 +28,42 @@
   label {
     position: absolute;
     top: 0;
-    left: 0;
 
     padding: 1em;
 
     @include font;
     font-size: .5em;
     color: $input-label;
-    text-transform: uppercase;
     line-height: 1;
   }
+  label:not(.tooltip) {
+    text-transform: uppercase;
+    left: 0;
+  }
+  label.tooltip {
+    display: none;
+    padding-right: 0;
+    right: 0;
 
-  input:not(:valid):not(:focus) + label {
+    align-items: center;
+    &:after {
+      content: '';
+      margin-left: .5em;
+
+      border-top: .5em solid transparent;
+      border-bottom: .5em solid transparent;
+      border-right: .5em solid currentColor;
+    }
+  }
+
+  input:not(:valid):not(:focus) + label:not(.tooltip) {
     font-size: 1em;
     top: 50%;
     transform: translateY(-50%);
     padding: 0 .5em;
+  }
+
+  &:hover label.tooltip {
+    display: flex;
   }
 }
