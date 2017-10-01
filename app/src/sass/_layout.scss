@@ -36,8 +36,6 @@
   }
 }
 
-
-
 // SPACING OF LAYOUT
 
 body {
@@ -46,6 +44,9 @@ body {
 main {
   padding: $spacer-large-sm;
   background: $ui-main-bg;
+  > * {
+    margin: $spacer-small-sm 0 0;
+  }
 }
 header, nav, main {
   margin-top: $spacer-large-sm;
@@ -61,6 +62,9 @@ footer {
   }
   main {
     padding: $spacer-large-md;
+    > * {
+      margin: $spacer-small-md 0 0;
+    }
   }
   footer {
     margin-top: $spacer-small-md;

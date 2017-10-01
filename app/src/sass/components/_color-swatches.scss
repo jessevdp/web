@@ -1,10 +1,4 @@
 .color-container {
-
-  margin-top: $spacer-small-sm;
-  @media (min-width: $bp-md) {
-    margin-top: $spacer-small-md;
-  }
-
   display: flex;
   flex-wrap: wrap;
 

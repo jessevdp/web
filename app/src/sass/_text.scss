@@ -48,10 +48,9 @@ h4, h5, h6 {
   @include header;
   font-size: 1em;
 
-  margin: 0;
-  margin-top: $spacer-small-sm;
+  margin: $spacer-small-sm 0 0;
   @media (min-width: $bp-md) {
-    margin-top: $spacer-small-md;
+    margin: $spacer-small-md;
   }
   & + * {
     margin-top: 0!important;
@@ -62,11 +61,6 @@ p {
   @include font;
   font-size: 1em;
   color: $text-color;
-
-  margin: $spacer-small-sm 0 0;
-  @media (min-width: $bp-md) {
-    margin: $spacer-small-md 0 0;
-  }
 }
 
 strong {
