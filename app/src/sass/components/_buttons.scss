@@ -1,0 +1,20 @@
+button, button[type="button"] {
+  appearance: none;
+  background: none;
+
+  cursor: pointer;
+
+  @include font;
+  color: $button-text;
+  line-height: 1;
+
+  padding: .5em 1em;
+  border: .1em solid $button-border;
+  border-radius: .125em;
+
+  &.button-solid {
+    @include font-bold;
+    color: $button-solid-text;
+    background: $button-solid-bg;
+  }
+}
