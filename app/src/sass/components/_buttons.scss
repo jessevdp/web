@@ -18,6 +18,12 @@ button, button[type="button"] {
     background: $button-solid-bg;
   }
 
+  &.button-block {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  // THEMING OF BUTTONS
   &.button-primary {
     border-color: $button-primary-color;
     &:not(.button-solid) {
