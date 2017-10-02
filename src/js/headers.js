@@ -1,4 +1,4 @@
-(function() {
+(function () {
   var $container = document.querySelector('main')
   var $headings = $container.querySelectorAll('h1')
 
@@ -25,5 +25,4 @@
   links.forEach(function (link) {
     $separator.insertAdjacentHTML('beforebegin', link)
   })
-
-}());
+}())
