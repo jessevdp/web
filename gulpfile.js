@@ -58,6 +58,7 @@ gulp.task('content', function () {
       }
     }))
     .pipe(gulp.dest('app/'))
+    .pipe(browserSync.stream())
 })
 
 gulp.task('serve', ['content', 'sass', 'js'], function () {
@@ -71,6 +72,7 @@ gulp.task('serve', ['content', 'sass', 'js'], function () {
   gulp.watch(PATHS.styles.src, ['sass'])
   gulp.watch(PATHS.scripts.src, ['js'])
   gulp.watch(PATHS.content.src, ['content'])
+  //gulp.watch('app/**/*.html').on('change', browserSync.reload)
 })
 
 gulp.task('default', ['serve'])
