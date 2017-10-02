@@ -1,13 +1,14 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
+const sourcemaps = require('gulp-sourcemaps')
 
 const markdown = require('gulp-markdown')
 const inject = require('gulp-inject')
+
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
 const sass = require('gulp-sass')
-const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
 
 const PATHS = {
