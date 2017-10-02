@@ -7,6 +7,6 @@ before_script:
 
 deploy:
   - provider: script
-    script: deploy.sh
+    script: deploy.sh ./app gh-pages https://$GITHUB_TOKEN@github.com/jessevdp/web.git
     on:
       branch: master
