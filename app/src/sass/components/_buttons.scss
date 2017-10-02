@@ -17,4 +17,42 @@ button, button[type="button"] {
     color: $button-solid-text;
     background: $button-solid-bg;
   }
+
+  &.button-primary {
+    border-color: $button-primary-color;
+    &:not(.button-solid) {
+      color: $button-primary-color;
+    }
+    &.button-solid {
+      background: $button-primary-color;
+    }
+  }
+  &.button-success {
+    border-color: $button-success-color;
+    &:not(.button-solid) {
+      color: $button-success-color;
+    }
+    &.button-solid {
+      background: $button-success-color;
+    }
+  }
+  &.button-danger {
+    border-color: $button-danger-color;
+    &:not(.button-solid) {
+      color: $button-danger-color;
+    }
+    &.button-solid {
+      background: $button-danger-color;
+    }
+  }
+  &[disabled] {
+    cursor: default;
+    border-color: $button-disabled-color;
+    &:not(.button-solid) {
+      color: $button-disabled-color;
+    }
+    &.button-solid {
+      background: $button-disabled-color;
+    }
+  }
 }
