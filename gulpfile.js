@@ -8,35 +8,47 @@ const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
 
+const PATHS = {
+  styles: {
+    src: 'app/src/sass/**/*.scss',
+    dest: 'app/assets/css/'
+  },
+  scripts: {
+    src: 'app/src/js/**/*.js',
+    dest: 'app/assets/js/'
+  }
+}
+
 gulp.task('sass', function () {
-  return gulp.src('./app/src/sass/**/*.scss')
+  return gulp.src(PATHS.styles.src)
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded'} ).on('error', sass.logError))
     .pipe(sourcemaps.write())
     .pipe( autoprefixer({ browsers: ['last 2 versions'] }) )
-    .pipe(gulp.dest('./app/assets/css/'))
+    .pipe(gulp.dest(PATHS.styles.dest))
     .pipe(browserSync.stream())
 })
 
 gulp.task('js', function () {
-  return gulp.src('./app/src/js/**/*.js')
+  return gulp.src(PATHS.scripts.src)
     .pipe(sourcemaps.init())
     .pipe(concat('all.min.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write(''))
-    .pipe(gulp.dest('./app/assets/js/'))
+    .pipe(gulp.dest(PATHS.scripts.dest))
     .pipe(browserSync.stream())
 })
 
 gulp.task('serve', ['sass', 'js'], function () {
+  console.log(PATHS.styles.src);
   browserSync.init({
-    server: "./app",
+    server: './app',
     injectChanges: true,
     notify: false
   })
 
-  gulp.watch('app/src/sass/**/*.scss', ['sass'])
-  gulp.watch('app/src/js/**/*.js', ['js'])
+  gulp.watch(PATHS.styles.src, ['sass'])
+  gulp.watch(PATHS.scripts.src, ['js'])
   gulp.watch('app/**/*.html').on('change', browserSync.reload)
 })
 
