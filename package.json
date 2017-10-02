@@ -4,7 +4,7 @@
   "description": "Project WEB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "travis-ci/travis-ci.sh"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "gulp-markdown": "^1.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "standard": "^10.0.3"
   }
 }
