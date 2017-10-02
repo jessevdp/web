@@ -10,11 +10,11 @@ const autoprefixer = require('gulp-autoprefixer')
 
 const PATHS = {
   styles: {
-    src: 'app/src/sass/**/*.scss',
+    src: 'src/sass/**/*.scss',
     dest: 'app/assets/css/'
   },
   scripts: {
-    src: 'app/src/js/**/*.js',
+    src: 'src/js/**/*.js',
     dest: 'app/assets/js/'
   }
 }
@@ -39,7 +39,12 @@ gulp.task('js', function () {
     .pipe(browserSync.stream())
 })
 
-gulp.task('serve', ['sass', 'js'], function () {
+gulp.task('html', function () {
+  return gulp.src('src/**/*.html')
+    .pipe(gulp.dest('app/'))
+})
+
+gulp.task('serve', ['html', 'sass', 'js'], function () {
   console.log(PATHS.styles.src);
   browserSync.init({
     server: './app',
@@ -49,7 +54,7 @@ gulp.task('serve', ['sass', 'js'], function () {
 
   gulp.watch(PATHS.styles.src, ['sass'])
   gulp.watch(PATHS.scripts.src, ['js'])
-  gulp.watch('app/**/*.html').on('change', browserSync.reload)
+  gulp.watch('src/**/*.html', ['html'])
 })
 
 gulp.task('default', ['serve'])
