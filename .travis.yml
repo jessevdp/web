@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - node
-  
+
 branches:
   only:
     - master
@@ -12,6 +12,7 @@ before_script:
 
 deploy:
   - provider: script
+    skip_cleanup: true
     script: deploy.sh ./app gh-pages https://$GITHUB_TOKEN@github.com/jessevdp/web.git
     on:
       branch: master
