@@ -4,7 +4,7 @@
   "description": "Project WEB",
   "main": "index.js",
   "scripts": {
-    "test": "travis-ci/travis-ci.sh"
+    "test": "./travis-ci.sh"
   },
   "repository": {
     "type": "git",
