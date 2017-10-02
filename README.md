@@ -6,8 +6,9 @@ The project uses [`gulp`](https://gulpjs.com/) as its task runner. There's a set
 - Sass to css conversion
 - JavaScript Concatenation & Minification
 - Markdown conversion and injection
+- Build — runs all of the above
 - Running a development server (using [browsersync](https://browsersync.io/))
-  - This task runs the other 3
+  - This task runs 'build'
 
 I explain these tasks [down below](#tasks).
 
