@@ -1,6 +1,8 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
 
+const markdown = require('gulp-markdown')
+const inject = require('gulp-inject')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
@@ -16,6 +18,10 @@ const PATHS = {
   scripts: {
     src: 'src/js/**/*.js',
     dest: 'app/assets/js/'
+  },
+  content: {
+    src: 'src/content/**/*.md',
+    dest: '**/*.html'
   }
 }
 
@@ -39,12 +45,22 @@ gulp.task('js', function () {
     .pipe(browserSync.stream())
 })
 
-gulp.task('html', function () {
-  return gulp.src('src/**/*.html')
+gulp.task('content', function () {
+  var CONTENT = gulp.src(PATHS.content.src)
+                  .pipe(markdown())
+
+  return gulp.src('src/' + PATHS.content.dest)
+    .pipe(inject(CONTENT, {
+      starttag: '<!-- inject:{{path}} -->',
+      relative: true,
+      transform: function (filePath, file) {
+        return file.contents.toString('utf8')
+      }
+    }))
     .pipe(gulp.dest('app/'))
 })
 
-gulp.task('serve', ['html', 'sass', 'js'], function () {
+gulp.task('serve', ['content', 'sass', 'js'], function () {
   console.log(PATHS.styles.src);
   browserSync.init({
     server: './app',
@@ -54,7 +70,7 @@ gulp.task('serve', ['html', 'sass', 'js'], function () {
 
   gulp.watch(PATHS.styles.src, ['sass'])
   gulp.watch(PATHS.scripts.src, ['js'])
-  gulp.watch('src/**/*.html', ['html'])
+  gulp.watch(PATHS.content.src, ['content'])
 })
 
 gulp.task('default', ['serve'])
