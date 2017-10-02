@@ -84,6 +84,19 @@ code {
   background: $text-code-bg;
   border-radius: .1em;
 }
+pre {
+  padding: $spacer-small-md;
+  background-color: $text-code-bg;
+  border-radius: .1em;
+
+  overflow-x: scroll;
+
+  // Reset child code element
+  code {
+    padding: 0;
+    background: none;
+  }
+}
 
 ol, ul {
   @include font;
