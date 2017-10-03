@@ -69,7 +69,6 @@ gulp.task('build', ['content', 'sass', 'js'], function () {
 })
 
 gulp.task('serve', ['build'], function () {
-  console.log(PATHS.styles.src)
   browserSync.init({
     server: './app',
     injectChanges: true,
