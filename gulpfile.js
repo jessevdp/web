@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
 const sourcemaps = require('gulp-sourcemaps')
+const deploy = require('gulp-gh-pages')
 
 const markdown = require('gulp-markdown')
 const inject = require('gulp-inject')
@@ -75,6 +76,18 @@ gulp.task('serve', ['build'], function () {
   gulp.watch(PATHS.styles.src, ['sass'])
   gulp.watch(PATHS.scripts.src, ['js'])
   gulp.watch(PATHS.content.src, ['content'])
+})
+
+gulp.task('deploy', function () {
+  if (!process.env.TRAVIS) throw new Error('Only TRAVIS is allowed deploy')
+  if (!process.env.GITHUB_TOKEN) throw new Error('Missing env variable: GITHUB_TOKEN')
+
+  let options = {
+    origin: `https://${process.env.GITHUB_TOKEN}@github.com/jessevdp/web.git`
+  }
+
+  return gulp.src('./app/**/*')
+    .pipe(deploy(options))
 })
 
 gulp.task('default', ['serve'])
