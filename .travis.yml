@@ -8,7 +8,6 @@ branches:
 
 before_script:
   - chmod +x travis-ci.sh
-  - chmod +x deploy.sh
   - npm install -g gulp-cli
 
 deploy:
