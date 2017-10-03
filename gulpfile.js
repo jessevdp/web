@@ -82,10 +82,12 @@ gulp.task('deploy', function () {
   if (!process.env.TRAVIS) throw new Error('Only TRAVIS is allowed deploy')
   if (!process.env.GITHUB_TOKEN) throw new Error('Missing env variable: GITHUB_TOKEN')
 
+  // Move our CNAME to production
+  gulp.src('src/CNAME').pipe(gulp.dest('app/'))
+
   let options = {
     remoteUrl: `https://${process.env.GITHUB_TOKEN}@github.com/jessevdp/web.git`
   }
-
   return gulp.src('./app/**/*')
     .pipe(deploy(options))
 })
