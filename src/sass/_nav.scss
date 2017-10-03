@@ -6,6 +6,9 @@ nav {
 
     display: block;
     margin-bottom: $spacer-small-md;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   .separator {
     @include font-bold;
