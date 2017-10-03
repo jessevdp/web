@@ -83,7 +83,7 @@ gulp.task('deploy', function () {
   if (!process.env.GITHUB_TOKEN) throw new Error('Missing env variable: GITHUB_TOKEN')
 
   let options = {
-    origin: `https://${process.env.GITHUB_TOKEN}@github.com/jessevdp/web.git`
+    remoteUrl: `https://${process.env.GITHUB_TOKEN}@github.com/jessevdp/web.git`
   }
 
   return gulp.src('./app/**/*')
