@@ -30,9 +30,9 @@ const PATHS = {
 gulp.task('sass', function () {
   return gulp.src(PATHS.styles.src)
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'expanded'} ).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe( autoprefixer({ browsers: ['last 2 versions'] }) )
+    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
     .pipe(gulp.dest(PATHS.styles.dest))
     .pipe(browserSync.stream())
 })
@@ -81,7 +81,7 @@ gulp.task('serve', ['build'], function () {
 })
 
 gulp.task('deploy', function () {
-  if (!process.env.TRAVIS) throw new Error('Only TRAVIS is allowed deploy')
+  if (!process.env.TRAVIS) throw new Error('Only TRAVIS is allowed to deploy')
   if (!process.env.GITHUB_TOKEN) throw new Error('Missing env variable: GITHUB_TOKEN')
 
   let options = {
