@@ -65,7 +65,7 @@ gulp.task('content', function () {
 gulp.task('build', ['content', 'sass', 'js'])
 
 gulp.task('serve', ['build'], function () {
-  console.log(PATHS.styles.src);
+  console.log(PATHS.styles.src)
   browserSync.init({
     server: './app',
     injectChanges: true,
@@ -75,7 +75,6 @@ gulp.task('serve', ['build'], function () {
   gulp.watch(PATHS.styles.src, ['sass'])
   gulp.watch(PATHS.scripts.src, ['js'])
   gulp.watch(PATHS.content.src, ['content'])
-  //gulp.watch('app/**/*.html').on('change', browserSync.reload)
 })
 
 gulp.task('default', ['serve'])
