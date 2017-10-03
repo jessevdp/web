@@ -4,11 +4,11 @@
   body {
     display: grid;
     grid-template-columns:
-      minmax($spacer-large-sm, 1fr)
+      $spacer-large-sm
       [padded-start] $spacer-large-sm
-      [main-start] auto
+      [main-start] 1fr
       [main-end] $spacer-large-sm
-      [padded-end] minmax($spacer-large-sm, 1fr);
+      [padded-end] $spacer-large-sm;
   }
   header, nav {
     grid-column: main;
