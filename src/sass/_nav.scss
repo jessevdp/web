@@ -41,4 +41,10 @@ nav {
       margin-right: $spacer-large-md;
     }
   }
+
+  @media (min-width: $bp-md) {
+    height: 0;
+    top: $spacer-large-md;
+    position: sticky;
+  }
 }
