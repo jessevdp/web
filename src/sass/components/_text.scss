@@ -92,7 +92,7 @@ pre {
   background-color: $text-code-bg;
   border-radius: .1em;
 
-  overflow-x: scroll;
+  overflow-x: auto;
 
   // Reset child code element
   code {
