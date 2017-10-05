@@ -1,4 +1,5 @@
 # Lists
+Lists can take two forms — ordered and unordered.
 
 - I'm an unordered list
 - Foo

@@ -1,7 +1,11 @@
 # Buttons
+We distinguish two different types of buttons. Buttons for action and text-links.
 
 Buttons should only ever be used for action, meaning things like the transmission of data, execution of a calculation, or the start of a process. Buttons should not be used for simple navigation — use text links instead. Utilizing buttons for simple navigation removes the importance of the button as a more significant tool for activity.
 
+[This is a text link](#)
+
+#### Buttons
 <button type="button" name="button">Default</button>
 <button class="button-solid" type="button" name="button">Solid Default</button>
 <button class="button-primary" type="button" name="button">Primary</button>
