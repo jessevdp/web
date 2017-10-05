@@ -3,6 +3,8 @@ Input components have been designed to be accessible. When using these input fie
 
 Input fields can have a tooltip message. This message can be help the user better understand what to put in.
 
+Input fields are put into a `form` tag. This form uses `CSS grid` layout to position the various input fields. You can use a class of `double` to force a specific input to always take up all of the form.
+
 ### Colors used
 <div class="color-container">
   <div class="color" style="--color: #A89E8D">#A89E8D</div>

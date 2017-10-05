@@ -1,5 +1,5 @@
 # Lists
-Lists can take two forms — ordered and unordered.
+Lists can take two forms — ordered and unordered. Both lists are set flush left to avoid ugly indents.
 
 - I'm an unordered list
 - Foo
