@@ -5,24 +5,40 @@ nav {
     text-decoration: none;
 
     display: block;
-    margin-bottom: $spacer-small-md;
+    margin-bottom: $spacer-small-sm;
     &:last-child {
       margin-bottom: 0;
     }
+    @media (min-width: $bp-md) {
+      margin-bottom: $spacer-small-md;
+    }
   }
-  .separator {
+  .header {
     @include font-bold;
     font-size: 1em;
     color: $nav-separator-color;
 
-    margin-top: $spacer-large-sm;
     margin-bottom: $spacer-small-sm;
     @media (min-width: $bp-md) {
-      margin-top: $spacer-large-md;
       margin-bottom: $spacer-small-md;
+    }
+  }
+
+  > div {
+    margin-top: $spacer-large-sm;
+    @media (min-width: $bp-md) {
+      margin-top: $spacer-large-md;
     }
     &:first-child {
       margin-top: 0;
+    }
+  }
+
+  @media (min-width: $bp-sm) and (max-width: $bp-md) {
+    display: flex;
+    > div {
+      margin-top: 0;
+      margin-right: $spacer-large-md;
     }
   }
 }

@@ -19,10 +19,10 @@
   })
 
   var $nav = document.querySelector('nav')
-  var $separator = $nav.querySelectorAll('.separator')[1]
+  var $container = $nav.querySelector('.local')
 
   // Add every link to the navigation
   links.forEach(function (link) {
-    $separator.insertAdjacentHTML('beforebegin', link)
+    $container.insertAdjacentHTML('beforeend', link)
   })
 }())
