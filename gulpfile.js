@@ -78,6 +78,7 @@ gulp.task('serve', ['build'], function () {
   gulp.watch(PATHS.styles.src, ['sass'])
   gulp.watch(PATHS.scripts.src, ['js'])
   gulp.watch(PATHS.content.src, ['content'])
+  gulp.watch(PATHS.content.dest, ['content'])
 })
 
 gulp.task('deploy', function () {
