@@ -3,30 +3,31 @@ nav {
   a {
     color: $nav-link-color;
     text-decoration: none;
+  }
 
-    display: block;
-    margin-bottom: $spacer-small-sm;
+  ul {
+    list-style: none;
+    margin: 0!important;
+  }
+  ul li {
+    margin-bottom: $spacer-small-sm!important;
     &:last-child {
-      margin-bottom: 0;
+      margin-bottom: 0!important;
     }
     @media (min-width: $bp-md) {
-      margin-bottom: $spacer-small-md;
+      margin-bottom: $spacer-small-md!important;
     }
   }
+
   .header {
     @include font-bold;
     font-size: 1em;
     color: $nav-separator-color;
 
     margin-bottom: $spacer-small-sm;
-    @media (min-width: $bp-md) {
-      margin-bottom: $spacer-small-md;
-    }
-  }
-
-  > div {
     margin-top: $spacer-large-sm;
     @media (min-width: $bp-md) {
+      margin-bottom: $spacer-small-md;
       margin-top: $spacer-large-md;
     }
     &:first-child {
@@ -35,10 +36,16 @@ nav {
   }
 
   @media (min-width: $bp-sm) and (max-width: $bp-md) {
-    display: flex;
-    > div {
-      margin-top: 0;
-      margin-right: $spacer-large-md;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-auto-flow: column;
+    grid-column-gap: $spacer-large-md;
+
+    @supports (display: grid) {
+      .header {
+        margin-top: 0;
+      }
     }
   }
 

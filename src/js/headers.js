@@ -23,6 +23,6 @@
 
   // Add every link to the navigation
   links.forEach(function (link) {
-    $navContainer.insertAdjacentHTML('beforeend', link)
+    $navContainer.insertAdjacentHTML('beforeend', '<li>' + link + '</li>')
   })
 }())
