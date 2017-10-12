@@ -1,6 +1,17 @@
 # Project WEB
 Project WEB
 
+# TODO list
+- [ ] Components
+  - [ ] Dropdown nav
+  - [ ] Tables
+  - [ ] Cards
+- [ ] Parallax?
+  - Something crazy cool
+  - Horizontal scroll?
+- [ ] Intro page
+- [ ] Contact form
+
 # Development
 The project uses [`gulp`](https://gulpjs.com/) as its task runner. There's a setup for the following tasks:
 - Sass to css conversion
