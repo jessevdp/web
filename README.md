@@ -5,7 +5,8 @@ Project WEB
 - [ ] Components
   - [ ] Dropdown nav
   - [ ] Tables
-  - [ ] Cards
+  - [X] blockquotes
+  - [ ] ( Cards )
 - [ ] Parallax?
   - Something crazy cool
   - Horizontal scroll?

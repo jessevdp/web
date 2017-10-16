@@ -88,7 +88,7 @@ code {
   border-radius: .1em;
 }
 pre {
-  padding: $spacer-small-md;
+  padding: $spacer-small-md; // TODO, add sm version of padding
   background-color: $text-code-bg;
   border-radius: .1em;
 
@@ -98,6 +98,21 @@ pre {
   code {
     padding: 0;
     background: none;
+  }
+}
+blockquote {
+  padding: $spacer-small-sm;
+  @media (min-width: $bp-md) {
+    padding: $spacer-small-md;
+  }
+
+  color: $text-quote-color;
+  background: $text-quote-bg;
+  border-left: .1em solid $text-quote-border;
+
+  p {
+    margin: 0;
+    color: inherit;
   }
 }
 
