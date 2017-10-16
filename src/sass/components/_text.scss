@@ -88,7 +88,11 @@ code {
   border-radius: .1em;
 }
 pre {
-  padding: $spacer-small-md; // TODO, add sm version of padding
+  padding: $spacer-small-sm;
+  @media (min-width: $bp-md) {
+    padding: $spacer-small-md;
+  }
+  
   background-color: $text-code-bg;
   border-radius: .1em;
 
