@@ -92,7 +92,7 @@ pre {
   @media (min-width: $bp-md) {
     padding: $spacer-small-md;
   }
-  
+
   background-color: $text-code-bg;
   border-radius: .1em;
 
@@ -117,6 +117,32 @@ blockquote {
   p {
     margin: 0;
     color: inherit;
+  }
+}
+
+table {
+  @include font;
+  color: $table-color;
+
+  width: 100%;
+  text-align: left;
+
+  border: 1px solid $table-border;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid;
+    border-color: inherit;
+    padding: .5em;
+  }
+
+  th {
+    @include font;
+    color: $table-header-color;
+  }
+
+  tbody tr:nth-child(even) {
+    background: $table-alt-bg;
   }
 }
 

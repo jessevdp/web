@@ -11,3 +11,12 @@ function foo () {
   return "A sample code snippet."
 }
 ```
+
+### Tables
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Row 1 value 1 | Row 1 value 2 | Row 1 value 3 |
+| Row 2 value 1 | Row 2 value 2 | Row 2 value 3 |
+| Row 3 value 1 | Row 3 value 2 | Row 3 value 3 |
+| Row 4 value 1 | Row 4 value 2 | Row 4 value 3 |
