@@ -1,0 +1,57 @@
+nav.dropdown {
+  // RESETS (from our actual nav)
+  height: auto;
+  position: static;
+  display: block;
+  ul li {
+    margin: 0!important;
+  }
+  // END
+
+  > ul {
+    display: flex;
+    background: $dropdown-bg;
+
+    > li {
+      flex: 1;
+      text-align: center;
+      position: relative;
+
+      // Submenu / dropdown
+      > ul {
+        display: none;
+        background: $dropdown-bg;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      // Show submenu on hover / focus
+      &:hover > ul,
+      > a:focus ~ ul {
+        display: block;
+      }
+    }
+  }
+
+  // Style the menu items a bit
+  li {
+    a {
+      color: $dropdown-text;
+      padding: 1em;
+      display: block; // needed for the parent to grow
+    }
+
+    &:hover {
+      background: $dropdown-active-bg;
+      > a {
+        color: $dropdown-active-text;
+      }
+    }
+  }
+}

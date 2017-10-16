@@ -3,8 +3,8 @@ Project WEB
 
 # TODO list
 - [ ] Components
-  - [ ] Dropdown nav
-  - [ ] Tables
+  - [X] Dropdown nav
+  - [X] Tables
   - [X] blockquotes
   - [ ] ( Cards )
 - [ ] Parallax?
