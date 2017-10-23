@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Project WEB</title>
+
+    <!-- MASTER css file -->
+    <link rel="stylesheet" href="../assets/css/master.css">
+  </head>
+  <body>
+
+    <header>
+      <h1><em>Project WEB</em></h1>
+      <time>Monday, 16 October 2017</time>
+      <h2>
+        Project WEB is intended to be a styleguide / css-framework for my personal blog.
+        It has been designed to be beautiful, readable and most importantly accesible.
+      </h2>
+    </header>
+
+    <nav>
+      <div class="header">On this page</div>
+      <ul class="local">
+      </ul>
+
+      <div class="header">Other pages</div>
+      <ul class="external">
+        <li><a href="../">Home</a></li>
+        <li><a href="../blog">Blog components</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- inject:../content/components/intro.html -->
+      <h1 id="introduction">Introduction</h1>
+<p>This page lists the &quot;extra components&quot; as described in <a href="../">the introduction</a>.</p>
+
+      <!-- endinject -->
+
+      <!-- inject:../content/components/inputs.html -->
+      <h1 id="input-fields">Input fields</h1>
+<p>Input components have been designed to be accessible. When using these input fields the user will know what fields are filled out and which ones aren&#39;t. Selected fields get a special style to emphasize the fact they&#39;re selected.</p>
+<p>Input fields can have a tooltip message. This message can be help the user better understand what to put in.</p>
+<p>Input fields are put into a <code>form</code> tag. This form uses <code>CSS grid</code> layout to position the various input fields. You can use a class of <code>double</code> to force a specific input to always take up all of the form.</p>
+<h3 id="example-form">Example form</h3>
+<form>
+  <div class="input-group">
+    <input type="text" name="input" required>
+    <label for="">Label</label>
+    <label for="" class="tooltip">Tooltip message</label>
+  </div>
+  <div class="input-group">
+    <input type="text" name="input" required>
+    <label for="">Label</label>
+    <label for="" class="tooltip">Tooltip message</label>
+  </div>
+  <div class="input-group double">
+    <input type="text" name="input" required>
+    <label for="">Label</label>
+    <label for="" class="tooltip">Tooltip message</label>
+  </div>
+  <div class="input-group">
+    <input type="text" name="input" required>
+    <label for="">Label</label>
+    <label for="" class="tooltip">Tooltip message</label>
+  </div>
+</form>
+
+      <!-- endinject -->
+
+      <!-- inject:../content/components/buttons.html -->
+      <h1 id="buttons">Buttons</h1>
+<p>We distinguish two different types of buttons. Buttons for action and text-links.</p>
+<p>Buttons should only ever be used for action, meaning things like the transmission of data, execution of a calculation, or the start of a process. <strong>Buttons should not be used for simple navigation</strong> — use text links instead. Utilizing buttons for simple navigation removes the importance of the button as a more significant tool for activity.</p>
+<p><a href="#">This is a text link</a></p>
+<h4 id="buttons">Buttons</h4>
+<button type="button" name="button">Default</button>
+<button class="button-solid" type="button" name="button">Solid Default</button>
+<button class="button-primary" type="button" name="button">Primary</button>
+<button class="button-solid button-primary" type="button" name="button">Solid Primary</button>
+<button class="button-success" type="button" name="button">Success</button>
+<button class="button-solid button-success" type="button" name="button">Solid Success</button>
+<button class="button-danger" type="button" name="button">Danger</button>
+<button class="button-solid button-danger" type="button" name="button">Solid Danger</button>
+<button disabled type="button" name="button">Disabled</button>
+<button disabled class="button-solid" type="button" name="button">Solid Disabled</button>
+<button class="button-block" type="button" name="button">Block</button>
+<button class="button-block button-solid" type="button" name="button">Solid Block</button>
+
+      <!-- endinject -->
+
+      <!-- inject:../content/components/dropdown.html -->
+      <h1 id="dropdown">Dropdown</h1>
+<p>A dropdown menu can in some cases be used to clean up the navigation of a site. Sometimes sites have a million different pages and need to link to every single one of them.</p>
+<p>In those cases it&#39;s a good idea to categorize these menu&#39;s into groups, these groups then become dropdown items.</p>
+<p>Personally I&#39;m not a big fan of dropdown menus. Whenever possible I try to keep everything on a few pages. Maybe 5 as a maximum — that way the user won&#39;t be too confused: having too many options is overwhelming!</p>
+<p><strong><em>Of course dropdown menus have their place.</em></strong></p>
+<nav class="dropdown">
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li>
+      <a href="#">Dropdown</a>
+      <ul>
+        <li><a href="#">Option 1</a></li>
+        <li><a href="#">Option 2</a></li>
+        <li><a href="#">Option 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Link</a></li>
+  </ul>
+</nav>
+
+      <!-- endinject -->
+
+      <!-- inject:../content/components/loaders.html -->
+      <h1 id="loaders">Loaders</h1>
+<p>Loaders are a good way to indicate to a user that the system is working. This prevents the user from just closing a page because &quot;It&#39;s stuck&quot;. We have 3 styles of page loaders: default, success and danger.</p>
+<div class="loader"></div>
+<div class="loader loader-success"></div>
+<div class="loader loader-danger"></div>
+
+      <!-- endinject -->
+
+    </main>
+
+    <footer>
+      <img src="https://jessevdp.nl/assets/global/logo-circle.svg" alt="logo">
+      <span>Project by</span>
+      <a href="https://jessevdp.nl" target="_blank">jessevdp</a>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../assets/js/all.min.js"></script>
+
+  </body>
+</html>

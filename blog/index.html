@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Project WEB</title>
+
+    <!-- MASTER css file -->
+    <link rel="stylesheet" href="../assets/css/master.css">
+  </head>
+  <body>
+
+    <header>
+      <h1><em>Project WEB</em></h1>
+      <time>Monday, 16 October 2017</time>
+      <h2>
+        Project WEB is intended to be a styleguide / css-framework for my personal blog.
+        It has been designed to be beautiful, readable and most importantly accesible.
+      </h2>
+    </header>
+
+    <nav>
+      <div class="header">On this page</div>
+      <ul class="local">
+      </ul>
+
+      <div class="header">Other pages</div>
+      <ul class="external">
+        <li><a href="../">Home</a></li>
+        <li><a href="../components">Other components</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- inject:../content/blog/intro.html -->
+      <h1 id="introduction">Introduction</h1>
+<p>This page lists the styles needed for the blog part of this project, as described in <a href="../">the introduction</a>.</p>
+
+      <!-- endinject -->
+
+      <!-- inject:../content/blog/layout.html -->
+      <h1 id="the-layout">The layout</h1>
+<p>First of all I started by creating a layout. I decided that every blog post would have at least a header, a navigation, main content, and a footer.</p>
+<h3 id="header">Header</h3>
+<p>Every blog post would start with a title and a short introduction. This intro would help the end used decide weather or not the post was worth reading. Every post would also get a timestamp listing the date at which it was written.</p>
+<h3 id="main-content">Main content</h3>
+<p>The most important part of every blog post — their content. This would be one long single column of text. The content would be written in markdown. (more on that later) It&#39;s important that this single column wouldn&#39;t get too wide, long lines of text are harder and less inviting to read.</p>
+<h3 id="navigation">Navigation</h3>
+<p>Time is a limited resource. When writing blog posts I want to write about useful things I&#39;ve experimented with. Sometimes this might for example include background info on a new technique.</p>
+<p>To make sure people have the option of skipping through what they already know I want to provide quick links to the main headings in the post. <em>Every <code>&lt;h1&gt;</code> becomes a link that appears in the navigation section</em>.</p>
+<h3 id="footer">Footer</h3>
+<p>The footer would be used to simply credit the author of the post.</p>
+
+      <!-- endinject -->
+
+      <!-- inject:../content/blog/markdown.html -->
+      <h1 id="markdown">Markdown</h1>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is a markup language with plain text formatting syntax. It is designed so that it can be converted to HTML.</p>
+</blockquote>
+<p>Markdown syntax is converted into HTML code which can then be viewed in the browser. All I had to do was make sure I wrote styles for whatever the markdown converter was capable of outputting.</p>
+<h3 id="paragraphs">Paragraphs</h3>
+<p>Markdown takes any plain text written and separates it into <code>&lt;p&gt;</code> paragraphs at every blank line.</p>
+<pre><code class="lang-md">This is a paragraph.
+
+This is a paragraph too!
+</code></pre>
+<h3 id="strong-text">Strong text</h3>
+<p>In markdown you can wrap any bit of text in double asterisks to make it <code>&lt;strong&gt;</code>.</p>
+<blockquote>
+<p>The HTML <code>&lt;strong&gt;</code> element gives text strong importance, and is typically displayed in bold.</p>
+</blockquote>
+<p>Let&#39;s see that in action:</p>
+<pre><code class="lang-md">This word will be **strong**!
+</code></pre>
+<p>This word will be <strong>strong</strong>!</p>
+<h3 id="emphasis">Emphasis</h3>
+<p>In markdown you can wrap any bit of text in single asterisks to make it emphasized <code>&lt;em&gt;</code>.</p>
+<blockquote>
+<p> The HTML <code>&lt;em&gt;</code> element marks text that has stress emphasis.</p>
+</blockquote>
+<p>Let&#39;s see that in action:</p>
+<pre><code class="lang-md">This word will *emphasized*!
+</code></pre>
+<p>This word will <em>emphasized</em>!</p>
+<h3 id="strong-emphasis">Strong emphasis</h3>
+<p>You can combine strong and emphasized text:</p>
+<pre><code class="lang-md">Let&#39;s combine ***strong and em***!
+</code></pre>
+<p>Let&#39;s combine <strong><em>strong and em</em></strong>!</p>
+<h3 id="links">Links</h3>
+<p>In markdown you can create links easily:</p>
+<pre><code class="lang-md">This will become [a link](http://example.com)!
+</code></pre>
+<p>This will become <a href="http://example.com">a link</a>!</p>
+<h3 id="headers">Headers</h3>
+<p>Markdown can output every header from <code>h1</code> to <code>h6</code>:</p>
+<pre><code class="lang-md"># h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+</code></pre>
+<p>I&#39;ve styled <code>h4</code>, <code>h5</code>, and <code>h6</code> in the same way since I don&#39;t really need that many different headings.</p>
+<h3 id="code-snippets">Code snippets</h3>
+<p>Code snippets can either be inline or as a perforated block:</p>
+<pre><code class="lang-md">This will become an `inline code bit`!
+</code></pre>
+<p>This will become an <code>inline code bit</code>!</p>
+<p>Wrapping text in &#768;&#768;&#768; (triple back quotes) turns it into a perforated code block.</p>
+<h3 id="lists">Lists</h3>
+<p>Lists can take two forms — ordered and unordered. Both lists are set flush left to avoid ugly indents.</p>
+<pre><code>- I&#39;m an unordered list
+- Foo
+- Bar
+
+1. I&#39;m an ordered list
+1. Foo
+1. Bar
+</code></pre><ul>
+<li>I&#39;m an unordered list</li>
+<li>Foo</li>
+<li>Bar</li>
+</ul>
+<ol>
+<li>I&#39;m an ordered list</li>
+<li>Foo</li>
+<li>Bar</li>
+</ol>
+<h3 id="blockquotes">Blockquotes</h3>
+<p>In markdown <code>blockquote</code>s can be created by prefixing text with a <code>&gt;</code> (greater than sign):</p>
+<pre><code class="lang-md">&gt; Strive not to be a success, but rather to be of value.  
+~ Albert Einstein
+</code></pre>
+<p>The result:</p>
+<blockquote>
+<p>Strive not to be a success, but rather to be of value.<br>~ Albert Einstein</p>
+</blockquote>
+<h3 id="tables">Tables</h3>
+<p>Tables can also be created in markdown. These are a little bit trickier:</p>
+<pre><code>| Header 1 | Header 2 | Header 3 |
+| --- | --- | --- |
+| Row 1 value 1 | Row 1 value 2 | Row 1 value 3 |
+| Row 2 value 1 | Row 2 value 2 | Row 2 value 3 |
+| Row 3 value 1 | Row 3 value 2 | Row 3 value 3 |
+</code></pre><p>The result:</p>
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+<th>Header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row 1 value 1</td>
+<td>Row 1 value 2</td>
+<td>Row 1 value 3</td>
+</tr>
+<tr>
+<td>Row 2 value 1</td>
+<td>Row 2 value 2</td>
+<td>Row 2 value 3</td>
+</tr>
+<tr>
+<td>Row 3 value 1</td>
+<td>Row 3 value 2</td>
+<td>Row 3 value 3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="images">Images</h3>
+<p>Images can be inlined using a syntax much like the syntax of a link:</p>
+<pre><code>![image alt text](https://source.unsplash.com/9IBqihqhuHc/500x300)
+</code></pre><p>Note the <code>!</code> in front of the link syntax.</p>
+<p><img src="https://source.unsplash.com/9IBqihqhuHc/500x300" alt="image"></p>
+<p><strong>Alternatively images can be put into a <code>.image-container</code></strong>. This will cause the images to be aligned in a grid on bigger screen sizes.</p>
+<p>This is actually done by inlining some actual <code>HTML</code> into a markdown file, which is totally accepted.</p>
+<pre><code>&lt;div class=&quot;image-container&quot;&gt;
+  &lt;img src=&quot;https://source.unsplash.com/Pqh8WGC_i9k/500x300&quot; alt=&quot;img&quot;&gt;
+  &lt;img src=&quot;https://source.unsplash.com/Zrzf2XMx6tg/500x300&quot; alt=&quot;img&quot;&gt;
+  &lt;img src=&quot;https://source.unsplash.com/t1Sp-gwFAPg/500x300&quot; alt=&quot;img&quot;&gt;
+&lt;/div&gt;
+</code></pre><div class="image-container">
+  <img src="https://source.unsplash.com/Pqh8WGC_i9k/500x300" alt="img">
+  <img src="https://source.unsplash.com/Zrzf2XMx6tg/500x300" alt="img">
+  <img src="https://source.unsplash.com/t1Sp-gwFAPg/500x300" alt="img">
+</div>
+
+<p>When using this <code>.image-container</code> you should be mindful of the sizes of the images you select. Selecting varying sizes can cause a weirdly aligned layout.</p>
+
+      <!-- endinject -->
+
+    </main>
+
+    <footer>
+      <img src="https://jessevdp.nl/assets/global/logo-circle.svg" alt="logo">
+      <span>Project by</span>
+      <a href="https://jessevdp.nl" target="_blank">jessevdp</a>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../assets/js/all.min.js"></script>
+
+  </body>
+</html>
