@@ -2,12 +2,14 @@ form {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: $spacer-small-sm;
-  
-  @media (min-width: $bp-md) {
+
+  @media (min-width: $bp-sm) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: $spacer-small-md;
     .double {
       grid-column: span 2;
     }
+  }
+  @media (min-width: $bp-md) {
+    grid-gap: $spacer-small-md;
   }
 }
