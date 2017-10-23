@@ -21,5 +21,5 @@ I broke down what styles I would need for the blog:
 
 So I decided to split things up, create the basic styles needed for the blog and then add whatever else I needed for the school assignment.
 
-- [Blog components](/blog)
-- [Other components](/components)
+- [Blog components](./blog)
+- [Other components](./components)
